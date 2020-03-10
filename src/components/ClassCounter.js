@@ -14,7 +14,7 @@ class ClassCounter extends Component {
     document.title = "You clicked " + this.state.count + " times";
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     document.title = "You clicked " + this.state.count + " times";
   }
 
@@ -27,7 +27,7 @@ class ClassCounter extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Click</button>
+        <button onClick={this.handleClick}>Click { this.state.count } times</button>
       </div>
     )
   }
