@@ -16,7 +16,13 @@ class ClassCounter extends Component {
 
   componentDidUpdate() {
     document.title = "You clicked " + this.state.count + " times";
-  }}
+  }
+
+  handleClick = () => {
+    this.setState(prevState => ({
+      count: prevState.count + 1
+    }))
+  }
 
   render() {
     return (
