@@ -1,11 +1,11 @@
 import React from 'react';
-import ClassCounter from './components/useEffect/ClassCounter';
+import EffectCounterOne from './components/useEffect/EffectCounter01';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <ClassCounter />
+      <EffectCounterOne />
     </div>
   );
 }
