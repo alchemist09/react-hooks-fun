@@ -1,5 +1,5 @@
 import React from 'react';
-import ClassCounter from './components/ClassCounter';
+import ClassCounter from './components/useEffect/ClassCounter';
 import './App.css';
 
 function App() {
