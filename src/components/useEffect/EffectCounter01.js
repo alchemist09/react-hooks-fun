@@ -5,7 +5,7 @@ function EffectCounterOne() {
 
   return (
     <div>
-      <button>Count {count} times</button>
+      <button onClick={() => { setCount(prevState => prevState + 1) }}>Count {count} times</button>
     </div>
   )
 }
