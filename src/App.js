@@ -1,12 +1,10 @@
 import React from 'react';
-import EffectCounterOne from './components/useEffect/EffectCounter01';
-import './App.css';
-import ClassCounter from './components/useEffect/ClassCounter';
+import MouseContainer from './components/useEffect/MouseContainer';
 
 function App() {
   return (
     <div className="App">
-      <ClassCounter />
+      <MouseContainer />
     </div>
   );
 }
