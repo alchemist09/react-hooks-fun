@@ -16,6 +16,7 @@ class ClassCounter extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    console.log("updating document title.....");
     document.title = "You clicked " + this.state.count + " times";
   }
 
