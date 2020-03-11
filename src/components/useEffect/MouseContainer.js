@@ -3,11 +3,11 @@ import HookMouse from './HookMouse';
 
 function MouseContainer() {
   const [display, setDisplay] = useState(true);
-  
+
   return (
     <div>
-      <button>Toggle Display</button>
-      <HookMouse />
+      <button onClick={ () => setDisplay(!display) }>Toggle Display</button>
+      {display && <HookMouse />}
     </div>
   )
 }
