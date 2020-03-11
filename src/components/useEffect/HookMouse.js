@@ -5,12 +5,13 @@ function HookMouse() {
   const [y, setY] = useState(0);
 
   const handleMouseMove = (evt) => {
+    console.log("handleMouseMove() called....")
     setX(evt.clientX);
     setY(evt.clientY);
   }
 
   useEffect(() => {
-    console.log("useEffect......mousemove event handled");
+    console.log("useEffect......called");
     window.addEventListener('mousemove', handleMouseMove);
   }, [])
 
