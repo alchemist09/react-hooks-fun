@@ -37,7 +37,7 @@ class ClassCounter extends Component {
         <input
           type="text"
           value={this.state.name}
-          onChange={handleInputChange}
+          onChange={this.handleInputChange}
         />
         <button onClick={this.handleClick}>Click { this.state.count } times</button>
       </div>
