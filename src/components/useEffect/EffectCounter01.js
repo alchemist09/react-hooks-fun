@@ -5,6 +5,7 @@ function EffectCounterOne() {
   const [name, setName] = useState('');
 
   useEffect(() => {
+    console.log('useEffect......updating document title');
     document.title = "You clicked " + count + " times";
   })
 
