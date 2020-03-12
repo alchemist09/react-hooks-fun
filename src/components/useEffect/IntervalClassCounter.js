@@ -8,8 +8,18 @@ class IntervalClassCounter extends Component {
     }
   }
 
+  componentDidMount() {
+    this.interval = setInterval(this.tick, 1700);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.tick);
+  }
+
   tick = () => {
-    this.setState(prevState => prevState.count + 1);
+    this.setState(prevState => ({
+      count: prevState.count + 1
+    }))
   }
 
   render() {
