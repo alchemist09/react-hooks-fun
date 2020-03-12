@@ -8,6 +8,10 @@ class IntervalClassCounter extends Component {
     }
   }
 
+  tick = () => {
+    this.setState(prevState => prevState.count + 1);
+  }
+
   render() {
     const { count } = this.state;
     return (
