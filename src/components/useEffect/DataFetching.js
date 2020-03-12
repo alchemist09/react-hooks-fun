@@ -11,7 +11,7 @@ function DataFetching() {
           setPosts(res.data);
         })
       .catch(err => console.log(err));
-  });
+  }, []);
 
   return (
     <div>
