@@ -9,7 +9,7 @@ function IntervalHookCounter() {
     return () => {
       clearInterval(interval);
     }
-  })
+  }, [])
 
   return (
     <div style={{ width: '70%', textAlign: 'center', color: '#2a23fb' }}>
