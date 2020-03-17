@@ -16,14 +16,19 @@ const reducer = (state = initialState, action) => {
 }
 
 function MultipleReducers() {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [counterOne, dispatch] = useReducer(reducer, initialState)
+  const [counterTwo, dispatchTwo] = useReducer(reducer, initialState)
 
   return (
     <div style={{ width: '70%', margin: '20px auto 60px' }}>
-      <p>{state}</p>
-      <button onClick={ () => dispatch('increment') }>Increment</button>
-      <button onClick={ () => dispatch('decrement') }>Decrement</button>
+      <p>Counter One: {counterOne}</p>
+      <button onClick={ () => dispatch('increment') }>Increment Counter One</button>
+      <button onClick={ () => dispatch('decrement') }>Decrement Counter One</button>
       <button onClick={ () => dispatch('reset') }>Reset</button>
+      <p>Counter Two: {counterTwo}</p>
+      <button onClick={ () => dispatchTwo('increment') }>Increment Counter Two</button>
+      <button onClick={ () => dispatchTwo('decrement') }>Decrement Counter Two</button>
+      <button onClick={ () => dispatchTwo('reset') }>Reset</button>
     </div>
   )
 }
