@@ -1,15 +1,15 @@
 import React, { useReducer } from 'react'
 
 const initialState = {
-  slowCounter: 0
+  slowCounter: 0,
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'increment':
-      return { slowCounter: state.slowCounter + 1 }
+      return { slowCounter: state.slowCounter + action.value }
     case 'decrement':
-      return { slowCounter: state.slowCounter - 1 }
+      return { slowCounter: state.slowCounter - action.value }
     case 'reset':
       return initialState
     default:
