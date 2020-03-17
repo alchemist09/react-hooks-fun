@@ -1,9 +1,15 @@
 import React from 'react';
-import MultipleReducers from './components/useReducer/MultipleReducers';
+import ComponentA from './components/useReducer/ComponentA';
+import ComponentB from './components/useReducer/ComponentB';
+import ComponentC from './components/useReducer/ComponentC';
 
 function App() {
   return (
-    <MultipleReducers />
+    <div>
+      <ComponentA />
+      <ComponentB />
+      <ComponentC />
+    </div>
   );
 }
 
