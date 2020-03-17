@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LangContext, UserContext } from '../../App';
+import { LangContext, UserContext, ThemeContext } from '../../App';
 
 class ClassContext extends Component {
   render() {
@@ -13,10 +13,19 @@ class ClassContext extends Component {
                   {
                     user => {
                       return (
-                        <React.Fragment>
-                          <p>Language: {language}</p>
-                          <p>User: {user}</p>
-                        </React.Fragment> 
+                        <ThemeContext.Consumer>
+                          {
+                            theme => {
+                              return (
+                                <React.Fragment>
+                                  <p>Language: {language}</p>
+                                  <p>User: {user}</p>
+                                  <p>Theme: {theme}</p>
+                                </React.Fragment> 
+                              )
+                            }
+                          }
+                        </ThemeContext.Consumer>
                       )
                     }     
                   }
