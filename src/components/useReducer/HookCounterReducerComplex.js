@@ -8,9 +8,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'increment':
-      return { slowCounter: state.slowCounter + action.value }
+      return { ...state, slowCounter: state.slowCounter + action.value }
     case 'decrement':
-      return { slowCounter: state.slowCounter - action.value }
+      return { ...state, slowCounter: state.slowCounter - action.value }
     case 'increment_fast':
       return { ...state, fastCounter: state.fastCounter + action.value }
     case 'decrement_fast':
