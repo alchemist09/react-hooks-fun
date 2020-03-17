@@ -1,11 +1,15 @@
 import React from 'react';
-import DataFetching from './components/useEffect/DataFetching';
+import RandomClass from './components/useContext/RandomClass';
+
+export const LangContext = React.createContext();
 
 function App() {
   return (
-    <div className="App">
-      <DataFetching />
-    </div>
+    <LangContext.Provider value="American English">
+      <div className="App">
+        <RandomClass />
+      </div>
+    </LangContext.Provider>
   );
 }
 
