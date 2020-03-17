@@ -1,9 +1,9 @@
 import React from 'react';
-import HookCounterReducerComplex from './components/useReducer/HookCounterReducerComplex';
+import MultipleReducers from './components/useReducer/MultipleReducers';
 
 function App() {
   return (
-    <HookCounterReducerComplex />
+    <MultipleReducers />
   );
 }
 
