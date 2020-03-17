@@ -1,10 +1,9 @@
 import React from 'react'
+import ComponentF from './ComponentF'
 
 function ComponentE() {
   return (
-    <div>
-      <p>Component E</p>
-    </div>
+    <ComponentF />
   )
 }
 
