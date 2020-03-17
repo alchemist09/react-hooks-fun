@@ -1,9 +1,9 @@
 import React from 'react';
-import HookCounterReducer from './components/useReducer/HookCounterReducer';
+import HookCounterReducerComplex from './components/useReducer/HookCounterReducerComplex';
 
 function App() {
   return (
-    <HookCounterReducer />
+    <HookCounterReducerComplex />
   );
 }
 
