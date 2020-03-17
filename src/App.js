@@ -26,6 +26,7 @@ function App() {
   return (
     <div>
       <CounterContext.Provider value={{ count: countValue, counterDispatch: dispatch }}>
+        <p>Count Value: {countValue}</p>
         <ComponentA />
         <ComponentB />
         <ComponentC />
