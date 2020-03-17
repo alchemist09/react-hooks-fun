@@ -1,13 +1,15 @@
 import React, { useReducer } from 'react'
 
-const initialState = 0
+const initialState = {
+  slowCounter: 0
+}
 
 const reducer = (state = initialState, action) => {
-  switch (action) {
+  switch (action.type) {
     case 'increment':
-      return state + 1
+      return { slowCounter: state.slowCounter + 1 }
     case 'decrement':
-      return state - 1
+      return { slowCounter: state.slowCounter - 1 }
     case 'reset':
       return initialState
     default:
@@ -20,10 +22,10 @@ function HookCounterReducerComplex() {
 
   return (
     <div style={{ width: '70%', margin: '20px auto 60px' }}>
-      <p>{state}</p>
-      <button onClick={ () => dispatch('increment') }>Increment</button>
-      <button onClick={ () => dispatch('decrement') }>Decrement</button>
-      <button onClick={ () => dispatch('reset') }>Reset</button>
+      <p>Slow Counter: {state.slowCounter}</p>
+      <button onClick={ () => dispatch({ type: 'increment', value: 1 }) }>Increment</button>
+      <button onClick={ () => dispatch({ type: 'decrement', value: 1 }) }>Decrement</button>
+      <button onClick={ () => dispatch({ type: 'reset' }) }>Reset</button>
     </div>
   )
 }
