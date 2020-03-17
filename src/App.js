@@ -1,21 +1,9 @@
 import React from 'react';
-import RandomClass from './components/useContext/RandomClass';
-
-export const LangContext = React.createContext();
-export const UserContext = React.createContext();
-export const ThemeContext = React.createContext();
+import HookCounterReducer from './components/useReducer/HookCounterReducer';
 
 function App() {
   return (
-    <LangContext.Provider value="American English">
-      <UserContext.Provider value="Super User">
-        <ThemeContext.Provider value="Dark Mode">
-          <div className="App">
-            <RandomClass />
-          </div>
-        </ThemeContext.Provider>
-      </UserContext.Provider>
-    </LangContext.Provider>
+    <HookCounterReducer />
   );
 }
 
