@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react'
 import axios from 'axios';
 
-const API_ENDPOINT = `https://jsonplaceholder.typicode.com/posts/1`
+const API_ENDPOINT = `https://jsonplaceholder.typicod.com/posts/3`
 
 const initialState = {
   loading: true,
@@ -19,6 +19,7 @@ const reducer = (state = initialState, action) => {
     case 'FETCH_ERROR':
       return {
         loading: false,
+        post: {},
         error: 'Request failed. Something went wrong'
       }
     default:
@@ -46,7 +47,8 @@ function DataFetchingUseReducer() {
 
   return (
     <div>
-      
+      <p>{state.loading ? 'Loading........' :  state.post.title}</p>
+      <p>{state.error ? state.error : null}</p>
     </div>
   )
 }
