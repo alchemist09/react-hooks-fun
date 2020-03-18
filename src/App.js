@@ -1,10 +1,10 @@
 import React from 'react';
-import TopLevelComponent from './TopLevel';
+import DataFetchingUseReducer from './components/useReducer/DataFetchingUseReducer';
 
 function App() {
   return (
     <div>
-      <TopLevelComponent />
+      <DataFetchingUseReducer />
     </div>
   );
 }
