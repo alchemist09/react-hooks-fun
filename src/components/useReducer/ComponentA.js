@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CounterContext } from '../../App'
+import { CounterContext } from '../../TopLevel'
 
 function ComponentA() {
   const { count, counterDispatch } = useContext(CounterContext)
