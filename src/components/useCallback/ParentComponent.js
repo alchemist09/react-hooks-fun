@@ -12,7 +12,7 @@ function ParentComponent() {
   const incrementSalary = () => setSalary(salary + 1280)
   
   return (
-    <div>
+    <div style={{ width: '60%', margin: '20px auto' }}>
       <Title />
       <Count text="Age" count={age} />
       <Button handleClick={incrementAge}>Increment Age</Button>
