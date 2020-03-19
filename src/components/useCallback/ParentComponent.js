@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import Title from './Title'
 import Count from './Count'
 import Button from './Button'
@@ -7,9 +7,13 @@ function ParentComponent() {
   const [age, setAge] = useState(18)
   const [salary, setSalary] = useState(10000)
 
-  const incrementAge = () => setAge(age + 1)
+  const incrementAge = useCallback(() => {
+    setAge(age + 1)
+  }, [age])
 
-  const incrementSalary = () => setSalary(salary + 1280)
+  const incrementSalary = useCallback(() => {
+    setSalary(salary + 1280)
+  }, [salary])
   
   return (
     <div style={{ width: '60%', margin: '20px auto' }}>
