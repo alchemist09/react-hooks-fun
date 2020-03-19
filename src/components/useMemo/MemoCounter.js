@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 function MemoCounter() {
   const [counterOne, setCounterOne] = useState(0)
@@ -27,11 +27,15 @@ function MemoCounter() {
     }
   }
 
+  const isPrimeNumber = useMemo(() => {
+    return isPrime(counterOne)
+  }, [counterOne])
+
   return (
     <div style={{ width: '60%', margin: '2em auto' }}>
       <p>
         <button onClick={incrementOne}>Counter One: {counterOne}</button>
-        <span>{ isPrime(counterOne) ? 'Prime' : 'Note Prime'}</span>
+        <span>{ isPrimeNumber ? 'Prime' : 'Note Prime'}</span>
       </p>
       <p>
         <button onClick={incrementTwo}>Counter Two: {counterTwo}</button>
