@@ -1,10 +1,10 @@
 import React from 'react';
-import DataFetchingUseReducer from './components/useReducer/DataFetchingUseReducer';
+import ParentComponent from './components/useCallback/ParentComponent';
 
 function App() {
   return (
     <div>
-      <DataFetchingUseReducer />
+      <ParentComponent />
     </div>
   );
 }
