@@ -1,10 +1,10 @@
 import React from 'react';
-import ParentComponent from './components/useCallback/ParentComponent';
+import MemoCounter from './components/useMemo/MemoCounter';
 
 function App() {
   return (
     <div>
-      <ParentComponent />
+      <MemoCounter />
     </div>
   );
 }
