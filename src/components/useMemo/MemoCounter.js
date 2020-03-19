@@ -13,7 +13,7 @@ function MemoCounter() {
   }
 
   return (
-    <div>
+    <div style={{ width: '60%', margin: '2em auto' }}>
       <p>
         <button onClick={incrementOne}>Counter One: {counterOne}</button>
       </p>
