@@ -13,6 +13,8 @@ function MemoCounter() {
   }
 
   const isPrime = num => {
+    let k=0
+    while(k < 2000000000) k++
     if(num < 1) {
       return false
     } else {
