@@ -12,10 +12,24 @@ function MemoCounter() {
     setCounterTwo(counterTwo + 1)
   }
 
+  const isPrime = num => {
+    if(num < 1) {
+      return false
+    } else {
+      for(let i=2; i <= num/2; i++) {
+        if(num % i === 0) {
+          return false
+        } 
+      }
+      return true
+    }
+  }
+
   return (
     <div style={{ width: '60%', margin: '2em auto' }}>
       <p>
         <button onClick={incrementOne}>Counter One: {counterOne}</button>
+        <span>{ isPrime(counterOne) ? 'Prime' : 'Note Prime'}</span>
       </p>
       <p>
         <button onClick={incrementTwo}>Counter Two: {counterTwo}</button>
