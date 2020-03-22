@@ -1,10 +1,10 @@
 import React from 'react';
-import MemoCounter from './components/useMemo/MemoCounter';
+import InputFocus from './components/useRef/InputFocus';
 
 function App() {
   return (
     <div>
-      <MemoCounter />
+      <InputFocus />
     </div>
   );
 }
