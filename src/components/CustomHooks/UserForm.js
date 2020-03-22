@@ -9,11 +9,11 @@ function UserForm() {
       <form>
         <p>
           <label>First Name</label>
-          <input type="text" value={firstname} onClick={ e => setFirstname(e.target.value) } />
+          <input type="text" value={firstname} onChange={ e => setFirstname(e.target.value) } />
         </p>
         <p>
           <label>Last Name</label>
-          <input type="text"  value={lastname} onClick={ e => setLastname(e.target.value) } />
+          <input type="text"  value={lastname} onChange={ e => setLastname(e.target.value) } />
         </p>
         <button>Submit</button>
       </form>
