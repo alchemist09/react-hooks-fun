@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import useDocumentTitle from './useDocumentTitle'
 
 function DocTitleTwo() {
   const [count, setCount] = useState(0)
 
-  useEffect(() => {
-    document.title = `Count - ${count}`
-  }, [count])
+  useDocumentTitle(count)
 
   return (
     <div style={{ width: '50%', margin: '1em auto 4em'}}>
