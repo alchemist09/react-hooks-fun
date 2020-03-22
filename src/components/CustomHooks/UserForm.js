@@ -4,9 +4,16 @@ function UserForm() {
   const [firstname, setFirstname] = useState('')
   const [lastname, setLastname] = useState('')
 
+  const handleSubmit = evt => {
+    evt.preventDefault()
+    alert(`First Name: ${firstname} - Last Name: ${lastname}`)
+    setFirstname('')
+    setLastname('')
+  }
+
   return (
     <div style={{ width: '60%', margin: '1em auto 4em' }}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <p>
           <label>First Name</label>
           <input type="text" value={firstname} onChange={ e => setFirstname(e.target.value) } />
