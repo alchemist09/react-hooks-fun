@@ -12,7 +12,7 @@ function useInput(initialState) {
     }
   }
 
-  return [value, reset, bindValues]
+  return [value, bindValues, reset]
 }
 
 export default useInput
