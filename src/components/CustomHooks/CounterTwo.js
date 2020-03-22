@@ -1,19 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
+import useCounter from './useCounter'
 
 function CounterTwo() {
-  const [count, setCount] = useState(0)
-
-  const increment = () => {
-    setCount(prevCount => prevCount + 1)
-  }
-
-  const decrement = () => {
-    setCount(prevCount => prevCount - 1)
-  }
-
-  const reset = () => {
-    setCount(0)
-  }
+  const [count, increment, decrement, reset] = useCounter(0)
 
   return (
     <div style={{ width: '60%', margin: '1em auto 4em'}}>
