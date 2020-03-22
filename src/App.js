@@ -1,12 +1,10 @@
 import React from 'react';
-import DocTitleOne from './components/CustomHooks/DocTitleOne';
-import DocTitleTwo from './components/CustomHooks/DocTitleTwo';
+import CounterOne from './components/CustomHooks/CounterOne';
 
 function App() {
   return (
     <div >
-      <DocTitleOne />
-      <DocTitleTwo />
+      <CounterOne />
     </div>
   );
 }
