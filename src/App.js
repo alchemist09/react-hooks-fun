@@ -1,10 +1,12 @@
 import React from 'react';
-import InputFocus from './components/useRef/InputFocus';
+import ClassInterval from './components/useRef/ClassInterval';
+import HookInterval from './components/useRef/HookInterval';
 
 function App() {
   return (
     <div>
-      <InputFocus />
+      <ClassInterval />
+      <HookInterval />
     </div>
   );
 }
