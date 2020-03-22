@@ -23,7 +23,10 @@ class ClassInterval extends Component {
   render() {
     return (
       <div style={{ width: '50%', margin: '2em auto 4em'}}>
-        <p>Class Timer: {this.state.timer}</p>
+        <p>
+          Class Timer: {this.state.timer}
+          <button onClick={ () => { clearInterval(this.interval)} }>Clear Timer</button>
+        </p>
       </div>
     )
   }
