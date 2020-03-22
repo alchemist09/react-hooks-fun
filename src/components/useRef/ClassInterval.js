@@ -8,6 +8,18 @@ class ClassInterval extends Component {
     }
   }
 
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState(prevState => ({
+        timer: prevState.timer + 1
+      }))
+    }, 1400)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
+
   render() {
     return (
       <div style={{ width: '50%', margin: '2em auto 4em'}}>
